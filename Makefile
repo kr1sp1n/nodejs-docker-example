@@ -16,7 +16,7 @@ all: build
 
 .built: .
 	docker build -t $(IMAGE) .
-	@docker inspect -f '{{.Id}}' $(IMAGE) > $(SERVICE_NAME)/.built
+	@docker inspect -f '{{.Id}}' $(IMAGE) > .built
 
 build    : ## Build the container
 build: .built
