@@ -28,8 +28,7 @@ clean:
 
 test     : ## Run tests
 test:
-	env
-	npm test
+	docker-compose run app npm test
 
 help     : ## Show this help
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
