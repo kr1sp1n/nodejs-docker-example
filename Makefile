@@ -28,6 +28,7 @@ clean:
 
 test     : ## Run tests
 test:
+	env
 	npm test
 
 help     : ## Show this help
