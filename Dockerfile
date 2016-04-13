@@ -5,7 +5,7 @@ WORKDIR /app
 
 ENV PATH /app/node_modules/.bin:$PATH
 
-ADD package.json /app
+COPY package.json /app
 RUN npm install
 
-ADD . /app
+COPY . /app
